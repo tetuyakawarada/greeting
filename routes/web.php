@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return '<h1>welcome</h1>';
-});
-
-Route::get('/comments', function () {
-    return '<h1>あいさつアプリ</h1>';
-});
+Route::get('/comments/random/', [App\Http\Controllers\RandomController::class, 'random']);
 
 Route::get('/comments/{str1}', [App\Http\Controllers\GreetingController::class, 'greeting']);
 
