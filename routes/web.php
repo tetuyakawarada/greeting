@@ -21,9 +21,6 @@ Route::get('/comments', function () {
     return '<h1>あいさつアプリ</h1>';
 });
 
-// Route::get('/comments/{str1}', function () {
-//     return '<h1>反映のテスト</h1>';
-// });
-
-
 Route::get('/comments/{str1}', [App\Http\Controllers\GreetingController::class, 'greeting']);
+
+Route::get('/comments/freeword/{free}', [App\Http\Controllers\FreeController::class, 'free']);
