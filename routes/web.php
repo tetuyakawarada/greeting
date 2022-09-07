@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return '<h1>welcome</h1>';
 });
+
+Route::get('/comments', function () {
+    return '<h1>あいさつアプリ</h1>';
+});
+
+// Route::get('/comments/{str1}', function () {
+//     return '<h1>反映のテスト</h1>';
+// });
+
+
+Route::get('/comments/{str1}', [App\Http\Controllers\GreetingController::class, 'greeting']);
